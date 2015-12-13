@@ -8,14 +8,19 @@ package ch.hearc.ig.odi.PersonFilm.presentation.bean;
 import ch.hearc.ig.odi.PersonFilm.presentation.business.Movie;
 import ch.hearc.ig.odi.PersonFilm.presentation.business.Person;
 import ch.hearc.ig.odi.PersonFilm.presentation.business.Services;
+import java.io.Serializable;
 import java.util.List;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
+import javax.inject.Named;
 
 /**
  *
  * @author yasmine.mabrouk
  */
-public class ListsBean {
+@RequestScoped 
+@Named
+public class ListsBean implements Serializable {
 
     @Inject
     Services service;

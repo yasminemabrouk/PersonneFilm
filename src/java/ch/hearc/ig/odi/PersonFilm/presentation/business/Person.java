@@ -13,14 +13,14 @@ import java.util.Map;
  */
 public class Person {
     Long id ;
-    String firstNsame;
-    String LastName ;
+    String firstName;
+    String lastName ;
     Map<Long, Movie> movies;
 
     public Person(Long id, String firstNsame, String LastName) {
         this.id = id;
-        this.firstNsame = firstNsame;
-        this.LastName = LastName;
+        this.firstName = firstNsame;
+        this.lastName = LastName;
     }
 
      /*
@@ -41,19 +41,19 @@ public class Person {
     }
 
     public String getFirstNsame() {
-        return firstNsame;
+        return firstName;
     }
 
     public void setFirstNsame(String firstNsame) {
-        this.firstNsame = firstNsame;
+        this.firstName = firstNsame;
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String LastName) {
-        this.LastName = LastName;
+        this.lastName = LastName;
     }
 
     public Map<Long, Movie> getMovies() {

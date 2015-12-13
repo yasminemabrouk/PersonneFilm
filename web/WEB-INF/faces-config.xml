@@ -12,7 +12,7 @@
         </locale-config>
         
         <resource-bundle>
-            <base-name>ch.hearc.ig.odi.customeraccount.internationalisation.msg</base-name>
+            <base-name>ch.hearc.ig.odi.PersonFilm.internationalisation.msg</base-name>
             <var>msg</var>
         </resource-bundle>
     </application>
