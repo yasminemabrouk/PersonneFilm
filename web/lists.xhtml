@@ -41,11 +41,11 @@ and open the template in the editor.
                     </f:facet>
                     <h:outputText  id="fdfgh" value="#{item.movies.size}"/>
                 </h:column>
-    
+
             </h:dataTable>
         </h:form>
-        
-         <div><h3>#{msg['list_film']}</h3></div>
+
+        <div><h3>#{msg['list_film']}</h3></div>
         <h:form>
             <h:dataTable id="table1" value="#{listsBean.getMovies()}" var="item"
                          border="1">
@@ -58,8 +58,9 @@ and open the template in the editor.
                 <h:column>
                     <f:facet name="header">
                         <h:outputText value="#{msg['Personne_nom']} " />
+
                     </f:facet>
-                    <h:outputText value="#{item.name}" />
+                    <h:commandLink id="gf" value="#{item.name}" action="#{detailFilmBean.showFilm(item)}" />
                 </h:column>
                 <h:column>
                     <f:facet name="header">
@@ -67,11 +68,11 @@ and open the template in the editor.
                     </f:facet>
                     <h:outputText value="#{item.producter}" />
                 </h:column>
-                 <h:column>
+                <h:column>
                     <f:facet name="header">
                         <h:outputText value="#{msg['nb_personne']}" />
                     </f:facet>
-                     <h:outputText value="#{item.people.hashCode}" />
+                    <h:outputText value="#{item.people.hashCode}" />
                 </h:column>
             </h:dataTable>
         </h:form>

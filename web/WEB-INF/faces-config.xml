@@ -25,6 +25,12 @@
             <from-outcome>Show</from-outcome>
             <to-view-id>/DetailsPersonne.xhtml</to-view-id>
         </navigation-case>
+        
+        <navigation-case>  
+            <from-action>#{detailFilmBean.showFilm(item)}</from-action>   
+            <from-outcome>ShowMovie</from-outcome>
+            <to-view-id>/DetailsFilm.xhtml</to-view-id>
+        </navigation-case>
     </navigation-rule>
     
     
