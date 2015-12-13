@@ -4,7 +4,7 @@
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
 
-      <application>
+    <application>
         <locale-config>
             <default-locale>fr</default-locale>
             <supported-locale>fr</supported-locale>
@@ -17,6 +17,15 @@
         </resource-bundle>
     </application>
 
+
+    <navigation-rule>
+        <from-view-id>/lists.xhtml</from-view-id>
+        <navigation-case>  
+            <from-action>#{detailPersonneBean.showPersonne(item)}</from-action>   
+            <from-outcome>Show</from-outcome>
+            <to-view-id>/DetailsPersonne.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
     
     
 </faces-config>

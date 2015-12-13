@@ -28,7 +28,8 @@ public class Person {
     parametre un objet de type Movie a jouter a n la liste
     */
     public void addMovie(Movie movie){
-    Integer position = movies.size()+ 1;
+    Integer position = movies.size() + 1;
+        System.out.println("yasmine : "+position);
     movies.put( position.longValue(), movie);
     }
     

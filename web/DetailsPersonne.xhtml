@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h:form>
+         <h2>
+            <h:outputText value="#{msg['details_personne']}" />
+        </h2>
+
+        <h:panelGrid border="0" columns="2">
+            <h:outputLabel value="#{msg['personne_id']} : " />
+            <h:outputText value="#{detailPersonneBean.personne.id}" />
+            <h:outputLabel value="#{msg['Personne_nom']} : " />
+            <h:outputText value="#{detailPersonneBean.personne.firstNsame}" />
+            <h:outputLabel value="#{msg['Personne_prenom']} : " />
+            <h:outputText value="#{detailPersonneBean.personne.lastName}" />
+        </h:panelGrid>
+            
+       <div><h3>#{msg['list_film']}</h3></div>
+       
+       <h:dataTable id="table1" value="#{detailPersonneBean.personne.movies}" var="item"
+                         border="1">
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="#{msg['personne_id']}" />
+                    </f:facet>
+                    <h:outputText value="#{item.id}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="#{msg['Personne_nom']} " />
+                    </f:facet>
+                    <h:outputText value="#{item.name}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="#{msg['Producteur']}" />
+                    </f:facet>
+                    <h:outputText value="#{item.producter}" />
+                </h:column>
+                 <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="#{msg['nb_personne']}" />
+                    </f:facet>
+                     <h:outputText value="#{item.people.size}" />
+                </h:column>
+            </h:dataTable>
+        </h:form>  
+    </body>
+</html>

@@ -27,14 +27,21 @@ and open the template in the editor.
                     <f:facet name="header">
                         <h:outputText value="#{msg['Personne_nom']} " />
                     </f:facet>
-                    <h:outputText value="#{item.firstNsame}" />
+                    <h:commandLink id="fg" value="#{item.firstNsame}" action="#{detailPersonneBean.showPersonne(item)}" />
                 </h:column>
                 <h:column>
                     <f:facet name="header">
                         <h:outputText value="#{msg['Personne_prenom']}" />
                     </f:facet>
-                    <h:outputText value="#{item.lastName}" />
+                    <h:commandLink id="gf" value="#{item.lastName}" action="#{detailPersonneBean.showPersonne(item)}" />
                 </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="#{msg['nb_film']}" />
+                    </f:facet>
+                    <h:outputText  id="fdfgh" value="#{item.movies.size}"/>
+                </h:column>
+    
             </h:dataTable>
         </h:form>
         
@@ -59,6 +66,12 @@ and open the template in the editor.
                         <h:outputText value="#{msg['Producteur']}" />
                     </f:facet>
                     <h:outputText value="#{item.producter}" />
+                </h:column>
+                 <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="#{msg['nb_personne']}" />
+                    </f:facet>
+                     <h:outputText value="#{item.people.hashCode}" />
                 </h:column>
             </h:dataTable>
         </h:form>

@@ -5,11 +5,9 @@
  */
 package ch.hearc.ig.odi.PersonFilm.presentation.bean;
 
-import ch.hearc.ig.odi.PersonFilm.presentation.business.Movie;
 import ch.hearc.ig.odi.PersonFilm.presentation.business.Person;
 import ch.hearc.ig.odi.PersonFilm.presentation.business.Services;
 import java.io.Serializable;
-import java.util.List;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -18,19 +16,31 @@ import javax.inject.Named;
  *
  * @author yasmine.mabrouk
  */
+
 @RequestScoped 
-@Named(value = "listsBean")
-public class ListsBean implements Serializable {
+@Named(value = "detailPersonneBean")
+public class DetailPersonneBean  implements Serializable{
+    
+    Person personne ;
 
-    @Inject
-    Services service;
-
-    public List<Person> getPeoples() {
-        return service.getPeopleList();
+    public DetailPersonneBean() {
     }
 
-    public List<Movie> getMovies() {
-        return service.getMoviesList();
+    public Person getPersonne() {
+        return personne;
     }
 
+    public void setPersonne(Person personne) {
+        this.personne = personne;
+    }
+    
+   public String showPersonne(Person p ){
+           if(p != null){
+            personne = p;
+        }else{
+            personne = null;
+           }
+   return "Show";
+   }
+    
 }
