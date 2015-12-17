@@ -5,6 +5,7 @@
  */
 package ch.hearc.ig.odi.PersonFilm.presentation.business;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -22,6 +23,7 @@ public class Movie {
         this.id = id;
         this.name = name;
         this.producter = producter;
+        this.people = new HashMap<>() ;
     }
    
     

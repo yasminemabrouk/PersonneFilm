@@ -39,7 +39,7 @@ and open the template in the editor.
                     <f:facet name="header">
                         <h:outputText value="#{msg['nb_film']}" />
                     </f:facet>
-                    <h:outputText  id="fdfgh" value="#{item.movies.size}"/>
+                    <h:outputText  id="fdfgh" value="#{item.movies.size()}"/>
                 </h:column>
 
             </h:dataTable>
@@ -72,7 +72,7 @@ and open the template in the editor.
                     <f:facet name="header">
                         <h:outputText value="#{msg['nb_personne']}" />
                     </f:facet>
-                    <h:outputText value="#{item.people.hashCode}" />
+                    <h:outputText value="#{item.people.size()}" />
                 </h:column>
             </h:dataTable>
         </h:form>
