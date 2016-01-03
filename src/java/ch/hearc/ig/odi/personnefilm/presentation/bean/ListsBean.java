@@ -15,7 +15,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 /**
- *
+ * bean lié a la page lists.xhtml
  * @author yasmine.mabrouk
  */
 @RequestScoped 
@@ -25,10 +25,18 @@ public class ListsBean implements Serializable {
     @Inject
     Services service;
 
+    /**
+     * methode qui permettre de récupéré la liste des personnes
+     * @return la liste des personnes
+     */
     public List<Person> getPeoples() {
         return service.getPeopleList();
     }
 
+    /**
+     * methode qui permettre de récupéré la liste des films
+     * @return la liste des films
+     */
     public List<Movie> getMovies() {
         return service.getMoviesList();
     }

@@ -13,7 +13,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
-        <div><h3>#{msg['list_personne']}</h3></div>
+        <div><h1>#{msg['list_personne']}</h1></div>
         <h:form>
             <h:dataTable id="table1" value="#{listsBean.getPeoples()}" var="item"
                          border="1">
@@ -45,7 +45,7 @@ and open the template in the editor.
             </h:dataTable>
         </h:form>
 
-        <div><h3>#{msg['list_film']}</h3></div>
+        <div><h1>#{msg['list_film']}</h1></div>
         <h:form>
             <h:dataTable id="table1" value="#{listsBean.getMovies()}" var="item"
                          border="1">

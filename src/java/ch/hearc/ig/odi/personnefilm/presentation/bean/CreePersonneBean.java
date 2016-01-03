@@ -13,7 +13,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 /**
- *
+ * bean lié a la page creePersonne.xhtml
  * @author yasmine.mabrouk
  */
 
@@ -22,7 +22,11 @@ import javax.inject.Named;
 public class CreePersonneBean implements Serializable {
    @Inject private Services services;
     Person personne ;
-
+    
+    /**
+     * constructeur 
+     * @param personne 
+     */
     private CreePersonneBean(Person personne) {
         this.personne = personne;
     }
@@ -35,8 +39,12 @@ public class CreePersonneBean implements Serializable {
         this.personne = personne;
     }
     
+    /**
+     * methodw addPerson qui permettre d'ajouter une personne a la liste des personne
+     * @return "addOk" si le personne est correct, addError" s'il est null.
+     */
     public String addPerson (){
-        
+        // verifier si la personne est nul ou pas
         if (personne != null){
         services.getPeopleList().add(personne);
          personne = null ;

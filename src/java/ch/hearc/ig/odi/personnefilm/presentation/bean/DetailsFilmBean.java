@@ -11,7 +11,7 @@ import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
 /**
- *
+ * bean lié a la page detailFilm.xhtml
  * @author yasmine.mabrouk
  */
 @SessionScoped
@@ -19,6 +19,9 @@ import javax.inject.Named;
 public class DetailsFilmBean implements Serializable {
 Movie film ;
     
+    /**
+     * constructeur par défaut
+     */
     public DetailsFilmBean() {
     }
 
@@ -29,7 +32,14 @@ Movie film ;
     public void setFilm(Movie film) {
         this.film = film;
     }
+    
+    /**
+     * methode qui reçoit le film à afficher sur la page.
+     * @param p le film
+     * @return "show" si le paramètre est correct, "error" s'il est null.
+     */
     public String showFilm(Movie p ){
+        // verifier si la movie est null ou pas
            if(p != null){
             film = p;
         }else{

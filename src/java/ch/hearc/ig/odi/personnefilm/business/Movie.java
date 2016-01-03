@@ -18,7 +18,13 @@ public class Movie {
     String name ;
     String producter;
     private Map<Long, Person> people;
-
+    
+    /**
+    * Constructeur paramétré de la classe Account. Toutes les valeurs sont obligatoires
+    * @param id Le numéro du film
+    * @param name Le nom du film
+    * @param producter Le producteur de filme
+    */
     public Movie(Long id, String name, String producter) {
         this.id = id;
         this.name = name;
@@ -26,7 +32,7 @@ public class Movie {
         this.people = new HashMap<>() ;
     }
    
-    
+
     public Long getId() {
         return id;
     }

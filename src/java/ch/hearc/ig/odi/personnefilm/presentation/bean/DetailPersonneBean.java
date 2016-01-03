@@ -11,7 +11,7 @@ import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
 /**
- *
+ * bean lié a la page detailPersonne.xhtml
  * @author yasmine.mabrouk
  */
 
@@ -21,8 +21,12 @@ public class DetailPersonneBean  implements Serializable{
     
     Person personne ;
 
+    /**
+     * constructeur pas défaut
+     */
     public DetailPersonneBean() {
     }
+
 
     public Person getPersonne() {
         return personne;
@@ -32,6 +36,11 @@ public class DetailPersonneBean  implements Serializable{
         this.personne = personne;
     }
     
+    /**
+     * methode qui reçoit le personne à afficher sur la page.
+     * @param p objet Person 
+     * @return "show" si le paramètre est correct, "error" s'il est null.
+     */
    public String showPersonne(Person p ){
            if(p != null){
             personne = p;
