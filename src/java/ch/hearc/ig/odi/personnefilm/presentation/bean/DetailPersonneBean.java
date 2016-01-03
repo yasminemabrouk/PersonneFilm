@@ -6,10 +6,8 @@
 package ch.hearc.ig.odi.personnefilm.presentation.bean;
 
 import ch.hearc.ig.odi.personnefilm.business.Person;
-import ch.hearc.ig.odi.personnefilm.service.Services;
 import java.io.Serializable;
-import javax.enterprise.context.RequestScoped;
-import javax.inject.Inject;
+import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
 /**
@@ -17,7 +15,7 @@ import javax.inject.Named;
  * @author yasmine.mabrouk
  */
 
-@RequestScoped 
+@SessionScoped
 @Named(value = "detailPersonneBean")
 public class DetailPersonneBean  implements Serializable{
     

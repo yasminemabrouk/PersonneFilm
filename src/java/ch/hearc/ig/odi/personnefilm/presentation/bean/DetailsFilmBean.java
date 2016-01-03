@@ -6,16 +6,15 @@
 package ch.hearc.ig.odi.personnefilm.presentation.bean;
 
 import ch.hearc.ig.odi.personnefilm.business.Movie;
-import ch.hearc.ig.odi.personnefilm.business.Person;
 import java.io.Serializable;
-import javax.enterprise.context.RequestScoped;
+import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
 /**
  *
  * @author yasmine.mabrouk
  */
-@RequestScoped
+@SessionScoped
 @Named(value = "detailFilmBean")
 public class DetailsFilmBean implements Serializable {
 Movie film ;
