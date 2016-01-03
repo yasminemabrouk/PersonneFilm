@@ -3,10 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ch.hearc.ig.odi.PersonFilm.presentation.business;
+package ch.hearc.ig.odi.personnefilm.service;
 
 
 //import ch.hearc.ig.odi.moviemanager.exception.UniqueException;
+import ch.hearc.ig.odi.personnefilm.business.Movie;
+import ch.hearc.ig.odi.personnefilm.business.Person;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

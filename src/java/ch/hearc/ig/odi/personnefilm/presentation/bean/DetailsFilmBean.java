@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ch.hearc.ig.odi.PersonFilm.presentation.bean;
+package ch.hearc.ig.odi.personnefilm.presentation.bean;
 
-import ch.hearc.ig.odi.PersonFilm.presentation.business.Movie;
-import ch.hearc.ig.odi.PersonFilm.presentation.business.Person;
+import ch.hearc.ig.odi.personnefilm.business.Movie;
+import ch.hearc.ig.odi.personnefilm.business.Person;
 import java.io.Serializable;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
